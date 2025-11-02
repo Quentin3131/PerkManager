@@ -24,7 +24,7 @@ public class ApplicationClass {
     @Bean
     public CommandLineRunner demo(ProfileRepository profileRepository, PerkRepository perkRepository, UserRepository userRepository) {
         return (args) -> {
-            AppUser user1 = new AppUser("aperson@gmail.com", "password");
+            AppUser user1 = new AppUser("quentinweir31@gmail.com", "password");
             Perk perk1 = new Perk("10% off movies with VISA", MembershipType.VISA, ProductType.MOVIES, LocalDate.now(), LocalDate.now().plusMonths(1), user1);
             Perk perk2 = new Perk("Free domestic flight with 10,000 Air Miles", MembershipType.AIRMILES, ProductType.FLIGHTS, LocalDate.now(), LocalDate.now().plusMonths(6), user1);
             Perk perk3 = new Perk("Save 20% on hotel bookings with CAA", MembershipType.CAA, ProductType.HOTELS, LocalDate.now(), LocalDate.now().plusMonths(2), user1);
